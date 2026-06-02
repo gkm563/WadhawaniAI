@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafd;
+  --foreground: #1f1f1f;
+  
+  --google-blue: #4285f4;
+  --google-red: #ea4335;
+  --google-yellow: #fbbc05;
+  --google-green: #34a853;
+  
+  --primary: var(--google-blue);
+  --primary-hover: #1a73e8;
+  
+  --card-bg: #ffffff;
+  --border-color: #e3e3e3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f1015;
+    --foreground: #e3e3e3;
+    
+    --primary: #8ab4f8;
+    --primary-hover: #aecbfa;
+    
+    --card-bg: #1e1f24;
+    --border-color: #2e3035;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  font-family: 'Outfit', 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Premium Google Style Cards */
+.google-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+  transition: box-shadow 0.28s cubic-bezier(0.4,0,0.2,1), border-color 0.2s;
+}
+
+.google-card:hover {
+  box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
+  border-color: var(--primary);
+}
+
+/* Google Colored Accent Borders */
+.border-blue { border-left: 5px solid var(--google-blue); }
+.border-red { border-left: 5px solid var(--google-red); }
+.border-yellow { border-left: 5px solid var(--google-yellow); }
+.border-green { border-left: 5px solid var(--google-green); }
+
+/* Dynamic Mic Waveforms Animation */
+.audio-bar {
+  display: inline-block;
+  width: 3px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: var(--google-red);
+  animation: bounce 1.2s ease-in-out infinite;
+}
+
+.audio-bar:nth-child(2) { background-color: var(--google-blue); animation-delay: 0.2s; }
+.audio-bar:nth-child(3) { background-color: var(--google-yellow); animation-delay: 0.4s; }
+.audio-bar:nth-child(4) { background-color: var(--google-green); animation-delay: 0.6s; }
+
+@keyframes bounce {
+  0%, 100% { height: 5px; }
+  50% { height: 22px; }
+}
+
+/* Typing Dots Animation */
+.typing-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--foreground);
+  border-radius: 50%;
+  animation: typing 1.4s infinite;
+  opacity: 0.4;
+}
+
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); opacity: 1; }
+}
+
+/* Micro-Transitions */
+.fade-in {
+  animation: fadeIn 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.button-press:active {
+  transform: scale(0.97);
+}
