@@ -8,7 +8,7 @@
 > **Wadhwani AI + Google.org Hackathon MVP**  
 > *Track: Higher Education & Skilling (Problem 3.2 — Job Readiness and Entrepreneurial Skills)*
 > 
-> Live Demo: [PathPilot AI on Vercel](https://wadhawani-ai.vercel.app) *(or your deployed Vercel URL)*
+> Live Demo: [PathPilot AI on Vercel](https://frontend-gkm563s-projects.vercel.app)
 
 PathPilot AI is a mobile-first, low-bandwidth, and offline-capable skilling and employability assistant engineered specifically for underserved students, rural learners, and first-generation job seekers in Tier-2/Tier-3 colleges across India.
 
